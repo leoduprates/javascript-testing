@@ -1,0 +1,102 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.428rem;
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+  height: 20%;
+  margin-bottom: 2rem;
+  min-width: 300px;
+  min-height: 200px;
+  margin: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 20%);
+  transition: ease-in, 500ms;
+}
+
+.title-container {
+  padding: 10px;
+}
+
+.title-card {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0.357rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #393545;
+  width: 80%;
+}
+
+.title-card:focus {
+  outline: none !important;
+  border: 2px solid #39354565;
+}
+
+.delete-card,
+.update-card {
+  float: right;
+  color: #393545;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.delete-card:hover {
+  color: #ea5455;
+  transition: ease-in, 500ms;
+}
+
+.update-card:hover {
+  color: #28c76f;
+  transition: ease-in, 500ms;
+}
+
+.description-container {
+  padding: 10px;
+}
+
+.description-card {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #5e5873;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0.357rem;
+  width: 100%;
+  resize: none;
+  columns: 10;
+}
+
+.description-card:focus {
+  outline: none !important;
+  border: 2px solid #39354565;
+}
+
+.card-button {
+  width: 20px !important;
+  height: 20px !important;
+  border: 1px solid transparent;
+  border-color: #7367f0;
+  background-color: #7367f0;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  right: 8;
+  bottom: 8;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 500;
+}
+
+.card-button:hover {
+  box-shadow: 0 4px 14px 0 rgb(115, 103, 240);
+  transition: ease-in, 500ms;
+}
