@@ -5,7 +5,7 @@ const sinon = require('sinon');
 describe('mongodb connection', () => {
   beforeEach(() => {
     sinon.stub.mongoose = {};
-    mongodb = proxyquire('../../server/database/mongodb', {
+    mongodb = proxyquire('../../src/database/mongodb', {
       mongoose: sinon.stub.mongoose,
     });
 

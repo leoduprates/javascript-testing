@@ -1,4 +1,4 @@
-const cardsRoute = require('../../server/routes/cardsRoute');
+const cardsRoute = require('../../src/routes/cardsRoute');
 
 describe('Cards Route', () => {
   it('should create card routes', () => {

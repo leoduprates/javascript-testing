@@ -1,13 +1,13 @@
-const app = require('../../app');
+const server = require('../../src/server/server');
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 const request = require('supertest');
 
-let mongod;
+let mongodb;
 
 beforeAll(async () => {
-  mongod = await MongoMemoryServer.create();
-  const URI = mongod.getUri();
+  mongodb = await MongoMemoryServer.create();
+  const URI = mongodb.getUri();
 
   await mongoose.connect(URI, {
     useNewUrlParser: true,
@@ -18,12 +18,12 @@ beforeAll(async () => {
 
 afterAll(async () => {
   await mongoose.disconnect();
-  await mongod.stop();
+  await mongodb.stop();
 });
 
 describe('/api/cards', () => {
   it('should post a new card', (done) => {
-    request(app)
+    request(server)
       .post('/api/cards')
       .set('Accept', 'application/json')
       .send({

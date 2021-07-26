@@ -1,57 +1,15 @@
-const express = require('express');
-const morgan = require('morgan');
-const path = require('path');
+const mongodb = require('./src/database/mongodb');
+const dotenv = require('dotenv');
 
-const app = express();
+dotenv.config({ path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env' });
+const PORT = process.env.PORT || 8080;
 
-// log requests
-app.use(morgan('tiny'));
+const server = require('./src/server/server');
 
-// parse request to body-parser
-app.use(express.json());
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
+// start mongodb connection
+mongodb.connection();
+
+// start server
+server.listen(PORT, () =>
+  console.log(`Server started at http://localhost:${PORT}`)
 );
-
-// set view engine
-app.set('view engine', 'ejs');
-
-// load assets
-app.use('/css', express.static(path.resolve(__dirname, 'assets/css')));
-app.use('/img', express.static(path.resolve(__dirname, 'assets/img')));
-app.use('/js', express.static(path.resolve(__dirname, 'assets/js')));
-
-//load fortawesome assets
-app.use(
-  '/css',
-  express.static(
-    path.resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free/css')
-  )
-);
-app.use(
-  '/js',
-  express.static(
-    path.resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free/js')
-  )
-);
-app.use(
-  '/webfonts',
-  express.static(
-    path.resolve(
-      __dirname,
-      'node_modules/@fortawesome/fontawesome-free/webfonts'
-    )
-  )
-);
-
-// load routers
-app.use('/', require('./server/routes/cardsRoute'));
-
-//load index
-app.get('/', (req, res) => {
-  res.render('index');
-});
-
-module.exports = app;
