@@ -7,7 +7,7 @@
     "test": "NODE_ENV=test jest --verbose",
     "coverage": "jest --collect-coverage",
     "dev": "nodemon --delay 500ms server.js",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "author": "leoduprates",
   "license": "ISC",

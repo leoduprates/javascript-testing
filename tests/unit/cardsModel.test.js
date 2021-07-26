@@ -1,4 +1,4 @@
-const cardsModel = require('../../server/models/cardsModel');
+const cardsModel = require('../../src/models/cardsModel');
 
 describe('Cards Model', () => {
   it('should create card model', () => {

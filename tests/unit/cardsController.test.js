@@ -1,5 +1,5 @@
-const cardsController = require('../../server/controllers/cardsController');
-const cardsModel = require('../../server/models/cardsModel');
+const cardsController = require('../../src/controllers/cardsController');
+const cardsModel = require('../../src/models/cardsModel');
 const sinon = require('sinon');
 
 describe('cards controller', () => {
