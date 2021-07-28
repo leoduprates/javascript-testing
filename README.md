@@ -2,6 +2,16 @@
 
 Project developed in Javascript with Unit, Integration and E2E tests with Jest, Supertest, Axios, Puppeteer, Sinon and MongoDB.
 
+- [x] Backend Demo. 
+- [x] Frontend Demo. 
+- [x] Unit Tests.
+- [ ] Integration Tests.
+- [ ] Backend Tests.
+- [ ] Frontend Tests.
+- [ ] Performance Tests.
+- [ ] Secueiry Tests.  
+
+
 ## Test
 
 ### Arrange, Act & Assert (AAA)
@@ -16,11 +26,12 @@ The tests were structured with 3 well-separated sections, Arrange, Act and Asser
 
 Using declarative ways of writing code allows learning to be fast and cohesive. This helps to organize the tests and more easily understand possible issues. Because of this, [Jest](https://jestjs.io/) was chosen to provide among other functionality the structures for the BDD.
 
-### Doubles
+### Test Doubles
 
-* Mocks:
-* Stubs:
-* Spies:
+* Mocks: Replace a real object by providing autonomous responses to method calls.
+* Stubs: Modify a function and delegate control over its behavior.
+* Spies: Spy can modify the behaviour of the original object, manipulating method call parameters and/or results.
+
 
 ### White-Box Testing
 
@@ -66,6 +77,7 @@ $ docker-compose up
 ```
 
 ## Links
+* [Martin Fowler](https://martinfowler.com/)
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 * [Twelve-Factor App](https://12factor.net/)
 * [Get NodeJS](https://nodejs.org/en/download/)
