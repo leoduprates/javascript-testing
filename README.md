@@ -1,6 +1,20 @@
+<p>
+    <img alt="Javascript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+    <img alt="NodeJS" src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white"/>
+    <img alt="Express.js" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"/>
+    <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"/>
+    <img alt="Jest" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white"/>
+    <a href="https://linkedin.com/in/leonardo-duprates">
+        <img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+    </a>
+</p>
+
+
 # Javascript Testing
 
-Project developed in Javascript with Unit, Integration and E2E tests with Jest, Supertest, Axios, Puppeteer, Sinon and MongoDB.
+Project developed in Javascript to present Unit, Integration, E2E and Non-Functional tests with [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest), [Axios](https://github.com/axios/axios), [Puppeteer](https://github.com/puppeteer/puppeteer), [Sinon](https://github.com/sinonjs/sinon) and [MongoDB](https://www.mongodb.com/).
+
+## Road Map
 
 - [x] Backend Demo. 
 - [x] Frontend Demo. 
@@ -12,7 +26,7 @@ Project developed in Javascript with Unit, Integration and E2E tests with Jest, 
 - [ ] Secueiry Tests.  
 
 
-## Test
+## Best Practices
 
 ### F.I.R.S.T Principles
 
@@ -40,6 +54,12 @@ Using declarative ways of writing code allows learning to be fast and cohesive. 
 * Stubs: Modify a function and delegate control over its behavior.
 * Spies: Spy can modify the behaviour of the original object, manipulating method call parameters and/or results.
 
+## Design Patterns
+
+This project uses the design patterns from [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+
+
+## Test
 
 ### White-Box Testing
 
@@ -51,61 +71,47 @@ Using declarative ways of writing code allows learning to be fast and cohesive. 
 * Backend Test: Tests the server-side and database of an application.
 * Frontend Test: Tests the client side of the application, verifying GUI functionality and usability.
 
-## Design Patterns
+## Quick Start
 
-This project uses the design patterns from [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+1. Create a .env file in the root directory of your project. 
 
-## Environment
+    ```
+    PORT=3000
+    MONGO_URI=mongodb://localhost:27017
+    MONGO_USER=dbuser
+    MONGO_PASSWORD=dbpassword
+    MONGO_NAME=cards
+    ```
 
-### Env
+2. Start MongoDB Container
 
-Project configurations are saved in an .env file separate from the code. This is based on The [Twelve-Factor App](https://12factor.net/) methodology.
+    ```
+    $ docker-compose up
+    ```
 
-Create a .env file in the root directory of your project. 
+3. Install Dependencies
 
-Add environment-specific variables on new lines in the form of NAME=VALUE. 
+    ```
+    $ npm install
+    ```
 
-For example:
+4. Run the Application
 
-```
-PORT=3000
-MONGO_URI=mongodb://localhost:27017
-MONGO_USER=dbuser
-MONGO_PASSWORD=dbpassword
-MONGO_NAME=cards
-```
+    ```
+    $ npm start
+    ```
 
-### MongoDB Container
+5. Run Tests
 
-This project use the Mongo Database. To start the database use the docker-compose script to run the containers with MongoDB and Mongo Express.
+    ```
+    $ npm test
+    ```
 
-```
-$ docker-compose up
-```
+6. Run Test Coverage
 
-### Build Project
-
-```
-$ npm install
-```
-
-### Run Application
-
-```
-$ npm start
-```
-
-### Run Tests
-
-```
-$ npm test
-```
-
-### Run Test Coverage
-
-```
-$ npm coverage
-```
+    ```
+    $ npm coverage
+    ```
 
 ## Links
 * [Martin Fowler](https://martinfowler.com/)
@@ -115,3 +121,10 @@ $ npm coverage
 * [Get Visual Studio Code](https://code.visualstudio.com/download)
 * [Get Docker](https://docs.docker.com/get-docker/)
 * [Get Docker Compose](https://docs.docker.com/compose/install/)
+* [shields.io](https://github.com/Ileriayo/markdown-badges)
+* [Jest](https://github.com/facebook/jest)
+* [Supertest](https://github.com/visionmedia/supertest)
+* [Axios](https://github.com/axios/axios)
+* [Puppeteer](https://github.com/puppeteer/puppeteer)
+* [Sinon](https://github.com/sinonjs/sinon)
+* [MongoDB](https://www.mongodb.com/).
