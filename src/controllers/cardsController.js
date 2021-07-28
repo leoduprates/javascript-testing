@@ -3,11 +3,11 @@ const cardsModel = require('../models/cardsModel');
 exports.render = async (req, res) => {
   try {
     const cards = await cardsModel.find();
-    res.render('index', { cards: cards });
+    res.status(200).render('index', { cards: cards });
   } catch (error) {
     res
       .status(500)
-      .send({ message: error.message || `error retrieving cards information` });
+      .send({ message: error.message || 'error retrieving cards information' });
   }
 };
 
@@ -33,15 +33,15 @@ exports.create = async (req, res) => {
 };
 
 exports.find = async (req, res) => {
-  if (req.query.id) {
-    const id = req.query.id;
+  if (req.params.id) {
+    const id = req.params.id;
 
     const card = await cardsModel.findById(id);
 
     if (!card) {
       res.status(404).send({ message: `not found the card with id ${id}` });
     } else {
-      res.send(card);
+      res.status(200).send(card);
     }
   } else {
     const cards = await cardsModel.find();
@@ -49,7 +49,7 @@ exports.find = async (req, res) => {
     if (!cards) {
       res.status(500).send({ message: `error retrieving cards information` });
     } else {
-      res.send(cards);
+      res.status(200).send(cards);
     }
   }
 };
@@ -69,7 +69,7 @@ exports.update = async (req, res) => {
     if (!card) {
       res.status(404).send({ message: `cannot update card with ${id}` });
     } else {
-      res.send(card);
+      res.status(200).send(card);
     }
   } catch (error) {
     res
@@ -79,14 +79,19 @@ exports.update = async (req, res) => {
 };
 
 exports.delete = async (req, res) => {
-  const id = req.params.id;
-
+  let id;
+  
   try {
+    id = req.params.id;
+
     const card = await cardsModel.findByIdAndDelete(id);
+
+    console.log(card);
+
     if (!card) {
       res.status(404).send({ message: `cannot delete card with id ${id}` });
     } else {
-      res.send({ message: 'card was deleted successfully' });
+      res.status(200).send({ message: 'card was deleted successfully' });
     }
   } catch (error) {
     res

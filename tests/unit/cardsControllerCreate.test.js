@@ -2,13 +2,10 @@ const cardsController = require('../../src/controllers/cardsController');
 const cardsModel = require('../../src/models/cardsModel');
 const sinon = require('sinon');
 
-describe('cards controller', () => {
+describe('cards controller - create', () => {
   let req, res;
 
   beforeEach(async () => {
-    cardsModel.prototype.save = sinon.stub();
-    cardsModel.prototype.save.returns();
-
     req = {
       body: {},
     };
@@ -24,7 +21,9 @@ describe('cards controller', () => {
     sinon.restore();
   });
 
-  it('should return status 200 if all conditions are valid', async () => {
+  it('should create a card if all conditions are valid', async () => {
+    sinon.stub(cardsModel.prototype, 'save').returns()
+
     req = {
       body: {
         title: 'Title value',
@@ -42,6 +41,8 @@ describe('cards controller', () => {
   });
 
   it('should return status 400 when body is empity', async () => {
+    sinon.stub(cardsModel.prototype, 'save').returns()
+
     req = {
       body: null,
     };
@@ -55,10 +56,7 @@ describe('cards controller', () => {
   });
 
   it('should return status 500 when mongodb return an error with message', async () => {
-    const mongoErrorMock = new Error('Mock Error');
-
-    cardsModel.prototype.save = sinon.stub();
-    cardsModel.prototype.save.throws(mongoErrorMock);
+    sinon.stub(cardsModel.prototype, 'save').throws(new Error('Mock Error'))
 
     await cardsController.create(req, res);
 
@@ -67,10 +65,7 @@ describe('cards controller', () => {
   });
 
   it('should return status 500 with default error message when mongodb return an error without message', async () => {
-    const mongoErrorMock = new Error();
-
-    cardsModel.prototype.save = sinon.stub();
-    cardsModel.prototype.save.throws(mongoErrorMock);
+    sinon.stub(cardsModel.prototype, 'save').throws(new Error());
 
     await cardsController.create(req, res);
 
