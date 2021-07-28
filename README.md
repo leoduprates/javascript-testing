@@ -12,17 +12,17 @@
 
 # Javascript Testing
 
-Project developed in Javascript to present Unit, Integration, E2E and Non-Functional tests with [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest), [Axios](https://github.com/axios/axios), [Puppeteer](https://github.com/puppeteer/puppeteer), [Sinon](https://github.com/sinonjs/sinon), [Artillery](https://github.com/artilleryio/artillery) and [MongoDB](https://www.mongodb.com/).
+Project developed in Javascript to present Unit, Integration, E2E and Non-Functional tests with [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest), [Axios](https://github.com/axios/axios), [Puppeteer](https://github.com/puppeteer/puppeteer), [Sinon](https://github.com/sinonjs/sinon) and [Artillery](https://github.com/artilleryio/artillery).
 
 ## Road Map
 
-- [x] Backend Demo. 
-- [x] Frontend Demo. 
-- [x] Unit Tests.
-- [ ] Integration Tests.
-- [ ] Backend Tests.
-- [ ] Frontend Tests.
-- [ ] Performance Tests.
+- [x] Backend Demo: Javascript, [Express.js](https://expressjs.com/), [Mongoose](https://github.com/Automattic/mongoose) and [MongoDB](https://www.mongodb.com/).
+- [x] Frontend Demo: HTML, CSS and [EJS](https://ejs.co/).
+- [x] Unit Tests: [Jest](https://github.com/facebook/jest), [Proxyquire](https://github.com/thlorenz/proxyquire) and [Sinon](https://github.com/sinonjs/sinon).
+- [ ] Integration Tests: [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest) and [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server).
+- [ ] Backend Tests: [Jest](https://github.com/facebook/jest) and [Axios](https://github.com/axios/axios).
+- [ ] Frontend Tests: [Jest](https://github.com/facebook/jest) and [Puppeteer](https://github.com/puppeteer/puppeteer).
+- [ ] Performance Tests: [Artillery](https://github.com/artilleryio/artillery).
 - [ ] Security Tests.  
 
 
@@ -122,7 +122,10 @@ This project uses the design patterns from [Airbnb JavaScript Style Guide](https
 * [Jest](https://github.com/facebook/jest)
 * [Martin Fowler](https://martinfowler.com/)
 * [MongoDB](https://www.mongodb.com/).
+* [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server)
+* [Mongoose](https://github.com/Automattic/mongoose)
 * [NodeJS](https://nodejs.org/en/download/)
+* [Proxyquire](https://github.com/thlorenz/proxyquire)
 * [Puppeteer](https://github.com/puppeteer/puppeteer)
 * [Shields.io](https://github.com/Ileriayo/markdown-badges)
 * [Sinon](https://github.com/sinonjs/sinon)
