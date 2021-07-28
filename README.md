@@ -54,7 +54,7 @@ Using declarative ways of writing code allows learning to be fast and cohesive. 
 * Stubs: Modify a function and delegate control over its behavior.
 * Spies: Spy can modify the behaviour of the original object, manipulating method call parameters and/or results.
 
-## Design Patterns
+### Design Patterns
 
 This project uses the design patterns from [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
@@ -110,7 +110,7 @@ This project uses the design patterns from [Airbnb JavaScript Style Guide](https
 6. Run Test Coverage
 
     ```
-    $ npm coverage
+    $ npm run coverage
     ```
 
 ## Links
