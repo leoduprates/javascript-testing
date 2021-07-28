@@ -23,7 +23,7 @@ Project developed in Javascript to present Unit, Integration, E2E and Non-Functi
 - [ ] Backend Tests.
 - [ ] Frontend Tests.
 - [ ] Performance Tests.
-- [ ] Secueiry Tests.  
+- [ ] Security Tests.  
 
 
 ## Best Practices
