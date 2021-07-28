@@ -14,6 +14,14 @@ Project developed in Javascript with Unit, Integration and E2E tests with Jest, 
 
 ## Test
 
+### F.I.R.S.T Principles
+
+* Fast
+* Independent
+* Repeatable
+* Self-Validating
+* Timely
+
 ### Arrange, Act & Assert (AAA)
 
 The tests were structured with 3 well-separated sections, Arrange, Act and Assert (AAA).
