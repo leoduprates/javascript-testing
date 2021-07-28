@@ -12,7 +12,7 @@
 
 # Javascript Testing
 
-Project developed in Javascript to present Unit, Integration, E2E and Non-Functional tests with [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest), [Axios](https://github.com/axios/axios), [Puppeteer](https://github.com/puppeteer/puppeteer), [Sinon](https://github.com/sinonjs/sinon) and [MongoDB](https://www.mongodb.com/).
+Project developed in Javascript to present Unit, Integration, E2E and Non-Functional tests with [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest), [Axios](https://github.com/axios/axios), [Puppeteer](https://github.com/puppeteer/puppeteer), [Sinon](https://github.com/sinonjs/sinon), [Artillery](https://github.com/artilleryio/artillery) and [MongoDB](https://www.mongodb.com/).
 
 ## Road Map
 
@@ -114,17 +114,18 @@ This project uses the design patterns from [Airbnb JavaScript Style Guide](https
     ```
 
 ## Links
-* [Martin Fowler](https://martinfowler.com/)
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-* [Twelve-Factor App](https://12factor.net/)
-* [Get NodeJS](https://nodejs.org/en/download/)
-* [Get Visual Studio Code](https://code.visualstudio.com/download)
-* [Get Docker](https://docs.docker.com/get-docker/)
-* [Get Docker Compose](https://docs.docker.com/compose/install/)
-* [shields.io](https://github.com/Ileriayo/markdown-badges)
-* [Jest](https://github.com/facebook/jest)
-* [Supertest](https://github.com/visionmedia/supertest)
+* [Artillery](https://github.com/artilleryio/artillery)
 * [Axios](https://github.com/axios/axios)
-* [Puppeteer](https://github.com/puppeteer/puppeteer)
-* [Sinon](https://github.com/sinonjs/sinon)
+* [Docker](https://docs.docker.com/get-docker/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
+* [Jest](https://github.com/facebook/jest)
+* [Martin Fowler](https://martinfowler.com/)
 * [MongoDB](https://www.mongodb.com/).
+* [NodeJS](https://nodejs.org/en/download/)
+* [Puppeteer](https://github.com/puppeteer/puppeteer)
+* [Shields.io](https://github.com/Ileriayo/markdown-badges)
+* [Sinon](https://github.com/sinonjs/sinon)
+* [Supertest](https://github.com/visionmedia/supertest)
+* [Twelve-Factor App](https://12factor.net/)
+* [Visual Studio Code](https://code.visualstudio.com/download)
