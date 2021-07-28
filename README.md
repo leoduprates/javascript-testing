@@ -35,14 +35,13 @@ Using declarative ways of writing code allows learning to be fast and cohesive. 
 
 ### White-Box Testing
 
-* Unit Test: 
-* Component Test:
-* Integration Test:
+* Unit Test: It's a way to test the smallest piece of code that can be logically isolated on a system.
+* Integration Test: It is a form of testing in which software modules are logically integrated and tested as a group.
 
 ### Black-Box Testing
 
-* Backend Test:
-* Frontend Test:
+* Backend Test: Tests the server-side and database of an application.
+* Frontend Test: Tests the client side of the application, verifying GUI functionality and usability.
 
 ## Design Patterns
 
@@ -60,7 +59,7 @@ Add environment-specific variables on new lines in the form of NAME=VALUE.
 
 For example:
 
-```toml
+```
 PORT=3000
 MONGO_URI=mongodb://localhost:27017
 MONGO_USER=dbuser
@@ -72,8 +71,32 @@ MONGO_NAME=cards
 
 This project use the Mongo Database. To start the database use the docker-compose script to run the containers with MongoDB and Mongo Express.
 
-```docker
+```
 $ docker-compose up
+```
+
+### Build Project
+
+```
+$ npm install
+```
+
+### Run Application
+
+```
+$ npm start
+```
+
+### Run Tests
+
+```
+$ npm test
+```
+
+### Run Test Coverage
+
+```
+$ npm coverage
 ```
 
 ## Links
