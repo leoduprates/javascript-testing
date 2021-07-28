@@ -1,6 +1,6 @@
 const cardsModel = require('../../src/models/cardsModel');
 
-describe('Cards Model', () => {
+describe('cards model', () => {
   it('should create card model', () => {
     const card = new cardsModel({
       title: 'Title value',

@@ -1,6 +1,6 @@
 const cardsRoute = require('../../src/routes/cardsRoute');
 
-describe('Cards Route', () => {
+describe('cards route', () => {
   it('should create card routes', () => {
     let routes = [];
 

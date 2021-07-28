@@ -50,9 +50,4 @@ app.use(
 // load routers
 app.use('/', require('../routes/cardsRoute'));
 
-//load index
-app.get('/', (req, res) => {
-  res.render('index');
-});
-
 module.exports = app;
