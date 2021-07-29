@@ -86,8 +86,6 @@ exports.delete = async (req, res) => {
 
     const card = await cardsModel.findByIdAndDelete(id);
 
-    console.log(card);
-
     if (!card) {
       res.status(404).send({ message: `cannot delete card with id ${id}` });
     } else {
