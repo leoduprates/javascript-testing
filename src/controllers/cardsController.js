@@ -13,8 +13,9 @@ exports.render = async (req, res) => {
 
 exports.create = async (req, res) => {
   try {
-    if (!req.body) {
+    if (Object.keys(req.body).length === 0) {
       res.status(400).send({ message: 'body content cannot be empity' });
+      return;
     }
 
     const card = new cardsModel({
@@ -63,6 +64,7 @@ exports.update = async (req, res) => {
     const id = req.params.id;
 
     const card = await cardsModel.findByIdAndUpdate(id, req.body, {
+      new: true,
       useFindAndModify: false,
     });
 
