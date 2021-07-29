@@ -9,6 +9,7 @@
     </a>
 </p>
 
+[![CI](https://github.com/leoduprates/javascript-testing/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/leoduprates/javascript-testing/actions/workflows/ci.yml)
 
 # Javascript Testing
 
