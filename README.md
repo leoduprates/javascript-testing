@@ -11,7 +11,6 @@
 
 [![CI](https://github.com/leoduprates/javascript-testing/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/leoduprates/javascript-testing/actions/workflows/ci.yml)
 
-
 # Javascript Testing
 
 Project developed in Javascript to present Unit, Integration, E2E and Non-Functional tests with [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest), [Axios](https://github.com/axios/axios), [Puppeteer](https://github.com/puppeteer/puppeteer), [Sinon](https://github.com/sinonjs/sinon) and [Artillery](https://github.com/artilleryio/artillery).
