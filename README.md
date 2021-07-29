@@ -122,7 +122,7 @@ This project uses the design patterns from [Airbnb JavaScript Style Guide](https
 * [Docker Compose](https://docs.docker.com/compose/install/)
 * [Jest](https://github.com/facebook/jest)
 * [Martin Fowler](https://martinfowler.com/)
-* [MongoDB](https://www.mongodb.com/).
+* [MongoDB](https://www.mongodb.com/)
 * [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server)
 * [Mongoose](https://github.com/Automattic/mongoose)
 * [NodeJS](https://nodejs.org/en/download/)

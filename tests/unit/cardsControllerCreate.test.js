@@ -44,7 +44,7 @@ describe('cards controller - create', () => {
     sinon.stub(cardsModel.prototype, 'save').returns()
 
     req = {
-      body: null,
+      body: {},
     };
 
     await cardsController.create(req, res);
@@ -58,6 +58,13 @@ describe('cards controller - create', () => {
   it('should return status 500 when mongodb return an error with message', async () => {
     sinon.stub(cardsModel.prototype, 'save').throws(new Error('Mock Error'))
 
+    req = {
+      body: {
+        title: 'Title value',
+        description: 'Description value',
+      },
+    };
+
     await cardsController.create(req, res);
 
     sinon.assert.calledWith(res.status, 500);
@@ -66,6 +73,13 @@ describe('cards controller - create', () => {
 
   it('should return status 500 with default error message when mongodb return an error without message', async () => {
     sinon.stub(cardsModel.prototype, 'save').throws(new Error());
+
+    req = {
+      body: {
+        title: 'Title value',
+        description: 'Description value',
+      },
+    };
 
     await cardsController.create(req, res);
 
