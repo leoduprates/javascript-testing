@@ -6,6 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=test jest --verbose",
     "test:unit": "jest --testPathPattern=tests/unit",
+    "test:integration": "jest --testPathPattern=tests/integration",
     "coverage": "jest --collect-coverage",
     "dev": "nodemon --delay 500ms index.js",
     "start": "node index.js"
