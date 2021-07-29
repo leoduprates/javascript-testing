@@ -4,7 +4,7 @@
   "description": "Javascript project built on Github Actions with Unit, Integration and E2E tests with Jest, Supertest, Puppeteer, Sinon and MongoDB.",
   "main": "server.js",
   "scripts": {
-    "test": "NODE_ENV=test jest --verbose",
+    "test": "NODE_ENV=test jest --verbose --testTimeout=20000",
     "coverage": "jest --collect-coverage",
     "dev": "nodemon --delay 500ms index.js",
     "start": "node index.js"
