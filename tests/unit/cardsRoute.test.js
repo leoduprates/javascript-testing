@@ -16,6 +16,7 @@ describe('cards route', () => {
         { path: '/api/cards/:id', method: 'delete' },
         { path: '/', method: 'get' },
         { path: '/api/cards', method: 'get' },
+        { path: '/api/cards/:id', method: 'get' },
         { path: '/api/cards', method: 'post' },
         { path: '/api/cards/:id', method: 'put' },
       ].sort()
