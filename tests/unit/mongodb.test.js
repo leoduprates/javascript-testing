@@ -1,33 +1,27 @@
 const mongoose = require('mongoose');
-const proxyquire = require('proxyquire');
 const sinon = require('sinon');
+const mongodb = require('../../src/database/mongodb')
 
 describe('mongodb connection', () => {
-  beforeEach(() => {
-    sinon.stub.mongoose = {};
-    mongodb = proxyquire('../../src/database/mongodb', {
-      mongoose: sinon.stub.mongoose,
-    });
+  let mongooseStub;
 
-    sinon.stub.mongoose.connect = sinon.stub();
+  beforeEach(() => {
+    mongooseStub = sinon.stub(mongoose, 'connect');
   });
 
   afterEach(async () => {
-    await mongoose.disconnect();
+    sinon.restore();
   });
 
   it('should connection ready state equal 1 (connected)', async () => {
-    process.env.MONGO_URI = 'mongodb://localhost:27017';
-    sinon.stub.mongoose.connection = {
-      readyState: 1
-    };
+    mongoose.connection.readyState = 1;
 
     await mongodb.connection();
     expect(mongoose.connection.readyState).toBe(1);
   });
 
   it('should not connection with mongodb and throw an error', async () => {
-    process.env.MONGO_URI = '';
+    mongooseStub.throws(new Error());
     await expect(mongodb.connection()).rejects.toThrow(Error);
   });
 });
