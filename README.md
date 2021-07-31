@@ -68,7 +68,7 @@ It was used on [GitHub Actions](https://github.com/features/actions) to build th
 
 1. Create a .env file in the root directory of your project. 
 
-    ```toml
+    ```
     PORT=3000
     MONGO_URI=mongodb://localhost:27017
     MONGO_USER=dbuser
