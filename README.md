@@ -50,7 +50,7 @@ It was used on [GitHub Actions](https://github.com/features/actions) to build th
 
 ## Built With
 
-- [x] Backend: Javascript, [Express.js](https://expressjs.com/), [Mongoose](https://github.com/Automattic/mongoose) and [MongoDB](https://www.mongodb.com/).
+- [x] Backend: [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [Express.js](https://expressjs.com/), [Mongoose](https://github.com/Automattic/mongoose) and [MongoDB](https://www.mongodb.com/).
 - [x] Frontend: [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) and [EJS](https://ejs.co/).
 - [x] Unit Testing: [Jest](https://github.com/facebook/jest), [Proxyquire](https://github.com/thlorenz/proxyquire) and [Sinon](https://github.com/sinonjs/sinon).
 - [x] Integration Testing: [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest) and [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server).
