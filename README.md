@@ -42,10 +42,10 @@ javascript-testing/
 It was used on [GitHub Actions](https://github.com/features/actions) to build the CI\CD pipeline.
 
 ```shell
-┌─────Build─────┐┌──────────────────────────────────────Test───────────────────────────────────────┐
+┌─────Build─────┐┌──────────────────────────────────Test───────────────────────────────────┐
 
-═══⦿═══════════⦿═══════════⦿═══════════⦿═══════════⦿═══════════⦿════════════⦿════════════⦿════ 
-  Pull        Build        Unit     Integration    Backend     Frontend    Performance    Security
+═══⦿══════════⦿══════════⦿══════════⦿══════════⦿══════════⦿═══════════⦿═══════════⦿═══ 
+  Pull       Build       Unit    Integration   Backend    Frontend   Performance   Security
 ```
 
 ## Built With
