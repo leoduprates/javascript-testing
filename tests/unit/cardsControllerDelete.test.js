@@ -67,6 +67,6 @@ describe('cards controller - delete', () => {
         await cardsController.delete(req, res);
 
         sinon.assert.calledWith(res.status, 500);
-        sinon.assert.calledWithMatch(res.send, { message: 'Cannot delete card with  id 61014b1134851b9203900c6e' });
+        sinon.assert.calledWithMatch(res.send, { message: 'error delete card' });
     });
 });

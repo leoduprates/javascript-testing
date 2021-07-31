@@ -34,24 +34,29 @@ exports.create = async (req, res) => {
 };
 
 exports.find = async (req, res) => {
-  if (req.params.id) {
-    const id = req.params.id;
-
-    const card = await cardsModel.findById(id);
-
-    if (!card) {
-      res.status(404).send({ message: `not found the card with id ${id}` });
+  try {
+    if (req.params.id) {
+      const id = req.params.id;  
+      const card = await cardsModel.findById(id);
+  
+      if (card == null) {
+        res.status(404).send({ message: `not found the card with id ${id}` });
+      } else {
+        res.status(200).send(card);
+      }
     } else {
-      res.status(200).send(card);
-    }
-  } else {
-    const cards = await cardsModel.find();
+      const cards = await cardsModel.find();
 
-    if (!cards) {
-      res.status(500).send({ message: `error retrieving cards information` });
-    } else {
-      res.status(200).send(cards);
-    }
+      if (cards.length == 0) {
+        res.status(404).send({ message: `error retrieving cards information` });
+      } else {
+        res.status(200).send(cards);
+      }
+    }    
+  } catch (error) {
+    res
+    .status(500)
+    .send({ message: error.message || 'error find card information' });
   }
 };
 
@@ -68,7 +73,7 @@ exports.update = async (req, res) => {
       useFindAndModify: false,
     });
 
-    if (!card) {
+    if (card == null) {
       res.status(404).send({ message: `cannot update card with ${id}` });
     } else {
       res.status(200).send(card);
@@ -88,7 +93,7 @@ exports.delete = async (req, res) => {
 
     const card = await cardsModel.findByIdAndDelete(id);
 
-    if (!card) {
+    if (card == null) {
       res.status(404).send({ message: `cannot delete card with id ${id}` });
     } else {
       res.status(200).send({ message: 'card was deleted successfully' });
@@ -96,6 +101,6 @@ exports.delete = async (req, res) => {
   } catch (error) {
     res
       .status(500)
-      .send({ message: error.message || `Cannot delete card with  id ${id}` });
+      .send({ message: error.message || `error delete card` });
   }
 };

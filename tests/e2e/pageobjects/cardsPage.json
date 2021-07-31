@@ -1,0 +1,6 @@
+{
+  "Add": "#card-button",
+  "Title": "#title-input",
+  "Description": "#description-textarea",
+  "Save": "#save-button"
+}

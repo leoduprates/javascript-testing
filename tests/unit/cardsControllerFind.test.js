@@ -78,6 +78,6 @@ describe('cards controller - find', () => {
     await cardsController.find(req, res);
 
     sinon.assert.calledWith(res.status, 500);
-    sinon.assert.calledWithMatch(res.send, { message: 'error retrieving cards information' });
+    sinon.assert.calledWithMatch(res.send, { message: 'Cannot read property \'length\' of undefined' });
   });
 });
