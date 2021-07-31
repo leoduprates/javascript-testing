@@ -50,19 +50,14 @@ It was used on [GitHub Actions](https://github.com/features/actions) to build th
 
 ## Built With
 
-* [Artillery](https://github.com/artilleryio/artillery)
-* [Axios](https://github.com/axios/axios)
-* [EJS](https://ejs.co/)
-* [Express.js](https://expressjs.com/)
-* [Faker.js](https://github.com/Marak/Faker.js)
-* [GitHub Actions](https://github.com/features/actions)
-* [Jest](https://github.com/facebook/jest)
-* [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server)
-* [Mongoose](https://github.com/Automattic/mongoose)
-* [Proxyquire](https://github.com/thlorenz/proxyquire)
-* [Puppeteer](https://github.com/puppeteer/puppeteer)
-* [Sinon](https://github.com/sinonjs/sinon)
-* [Supertest](https://github.com/visionmedia/supertest)
+- [x] Backend: Javascript, [Express.js](https://expressjs.com/), [Mongoose](https://github.com/Automattic/mongoose) and [MongoDB](https://www.mongodb.com/).
+- [x] Frontend: [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) and [EJS](https://ejs.co/).
+- [x] Unit Testing: [Jest](https://github.com/facebook/jest), [Proxyquire](https://github.com/thlorenz/proxyquire) and [Sinon](https://github.com/sinonjs/sinon).
+- [x] Integration Testing: [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest) and [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server).
+- [x] API Testing: [Jest](https://github.com/facebook/jest) and [Axios](https://github.com/axios/axios).
+- [x] GUI Testing: [Jest](https://github.com/facebook/jest), [Puppeteer](https://github.com/puppeteer/puppeteer) and [Faker.js](https://github.com/Marak/Faker.js).
+- [ ] Performance Testing: [Artillery](https://github.com/artilleryio/artillery).
+- [ ] Security Testing.
 
 ## Getting Started
 
@@ -149,17 +144,6 @@ Using declarative ways of writing code allows learning to be fast and cohesive. 
 
 * Backend Test: Tests the server-side and database of an application.
 * Frontend Test: Tests the client side of the application, verifying GUI functionality and usability.
-
-## Road Map
-
-- [x] Backend Demo: Javascript, [Express.js](https://expressjs.com/), [Mongoose](https://github.com/Automattic/mongoose) and [MongoDB](https://www.mongodb.com/).
-- [x] Frontend Demo: HTML, CSS and [EJS](https://ejs.co/).
-- [x] Unit Tests: [Jest](https://github.com/facebook/jest), [Proxyquire](https://github.com/thlorenz/proxyquire) and [Sinon](https://github.com/sinonjs/sinon).
-- [x] Integration Tests: [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest) and [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server).
-- [x] Backend Tests: [Jest](https://github.com/facebook/jest) and [Axios](https://github.com/axios/axios).
-- [x] Frontend Tests: [Jest](https://github.com/facebook/jest) and [Puppeteer](https://github.com/puppeteer/puppeteer).
-- [ ] Performance Tests: [Artillery](https://github.com/artilleryio/artillery).
-- [ ] Security Tests.  
 
 ## Links
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
