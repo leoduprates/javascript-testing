@@ -13,21 +13,104 @@
 
 # Javascript Testing
 
-Project developed in Javascript to present Unit, Integration, E2E and Non-Functional tests with [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest), [Axios](https://github.com/axios/axios), [Puppeteer](https://github.com/puppeteer/puppeteer), [Sinon](https://github.com/sinonjs/sinon) and [Artillery](https://github.com/artilleryio/artillery).
+White-box, black-box and non-functional test demonstration in an Express.js-based application with MVC pattern (Model-View-Controller).
 
-## Road Map
+## Project Architecture
 
-- [x] Backend Demo: Javascript, [Express.js](https://expressjs.com/), [Mongoose](https://github.com/Automattic/mongoose) and [MongoDB](https://www.mongodb.com/).
-- [x] Frontend Demo: HTML, CSS and [EJS](https://ejs.co/).
-- [x] Unit Tests: [Jest](https://github.com/facebook/jest), [Proxyquire](https://github.com/thlorenz/proxyquire) and [Sinon](https://github.com/sinonjs/sinon).
-- [ ] Integration Tests: [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest) and [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server).
-- [ ] Backend Tests: [Jest](https://github.com/facebook/jest) and [Axios](https://github.com/axios/axios).
-- [ ] Frontend Tests: [Jest](https://github.com/facebook/jest) and [Puppeteer](https://github.com/puppeteer/puppeteer).
-- [ ] Performance Tests: [Artillery](https://github.com/artilleryio/artillery).
-- [ ] Security Tests.  
+```shell
+javascript-testing/
+├── src
+│   ├── assets
+│   ├── controllers
+│   ├── database
+│   ├── models
+│   ├── routes
+│   ├── server
+│   └── views
+├── tests
+│   ├── e2e
+│   │   └── backend
+│   │   └── frontend
+│   ├── integration
+│   ├── performance
+│   ├── security
+│   └── unit
 
+```
+## Continuous Integration and Delivery
+
+It was used on [GitHub Actions](https://github.com/features/actions) to build the CI\CD pipeline.
+
+```shell
+┌─────Build─────┐┌──────────────────────────────────────Test───────────────────────────────────────┐
+
+═══⦿═══════════⦿═══════════⦿═══════════⦿═══════════⦿═══════════⦿════════════⦿════════════⦿════ 
+  Pull        Build        Unit     Integration    Backend     Frontend    Performance    Security
+```
+
+## Built With
+
+* [Artillery](https://github.com/artilleryio/artillery)
+* [Axios](https://github.com/axios/axios)
+* [EJS](https://ejs.co/)
+* [Express.js](https://expressjs.com/)
+* [Faker.js](https://github.com/Marak/Faker.js)
+* [GitHub Actions](https://github.com/features/actions)
+* [Jest](https://github.com/facebook/jest)
+* [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server)
+* [Mongoose](https://github.com/Automattic/mongoose)
+* [Proxyquire](https://github.com/thlorenz/proxyquire)
+* [Puppeteer](https://github.com/puppeteer/puppeteer)
+* [Sinon](https://github.com/sinonjs/sinon)
+* [Supertest](https://github.com/visionmedia/supertest)
+
+## Getting Started
+
+1. Create a .env file in the root directory of your project. 
+
+    ```toml
+    PORT=3000
+    MONGO_URI=mongodb://localhost:27017
+    MONGO_USER=dbuser
+    MONGO_PASSWORD=dbpassword
+    MONGO_NAME=cards
+    ```
+
+2. Start MongoDB Container
+
+    ```shell
+    $ docker-compose up
+    ```
+
+3. Install Dependencies
+
+    ```shell
+    $ npm install
+    ```
+
+4. Run the Application
+
+    ```shell
+    $ npm start
+    ```
+
+5. Run Tests
+
+    ```shell
+    $ npm test
+    ```
+
+6. Run Test Coverage
+
+    ```shell
+    $ npm run coverage
+    ```
 
 ## Best Practices
+
+### Design Patterns
+
+This project uses the design patterns from [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
 ### F.I.R.S.T Principles
 
@@ -49,16 +132,11 @@ The tests were structured with 3 well-separated sections, Arrange, Act and Asser
 
 Using declarative ways of writing code allows learning to be fast and cohesive. This helps to organize the tests and more easily understand possible issues. Because of this, [Jest](https://jestjs.io/) was chosen to provide among other functionality the structures for the BDD.
 
-### Test Doubles
+### Doubles
 
 * Mocks: Replace a real object by providing autonomous responses to method calls.
 * Stubs: Modify a function and delegate control over its behavior.
 * Spies: Spy can modify the behaviour of the original object, manipulating method call parameters and/or results.
-
-### Design Patterns
-
-This project uses the design patterns from [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
-
 
 ## Test
 
@@ -72,64 +150,24 @@ This project uses the design patterns from [Airbnb JavaScript Style Guide](https
 * Backend Test: Tests the server-side and database of an application.
 * Frontend Test: Tests the client side of the application, verifying GUI functionality and usability.
 
-## Quick Start
+## Road Map
 
-1. Create a .env file in the root directory of your project. 
-
-    ```
-    PORT=3000
-    MONGO_URI=mongodb://localhost:27017
-    MONGO_USER=dbuser
-    MONGO_PASSWORD=dbpassword
-    MONGO_NAME=cards
-    ```
-
-2. Start MongoDB Container
-
-    ```
-    $ docker-compose up
-    ```
-
-3. Install Dependencies
-
-    ```
-    $ npm install
-    ```
-
-4. Run the Application
-
-    ```
-    $ npm start
-    ```
-
-5. Run Tests
-
-    ```
-    $ npm test
-    ```
-
-6. Run Test Coverage
-
-    ```
-    $ npm run coverage
-    ```
+- [x] Backend Demo: Javascript, [Express.js](https://expressjs.com/), [Mongoose](https://github.com/Automattic/mongoose) and [MongoDB](https://www.mongodb.com/).
+- [x] Frontend Demo: HTML, CSS and [EJS](https://ejs.co/).
+- [x] Unit Tests: [Jest](https://github.com/facebook/jest), [Proxyquire](https://github.com/thlorenz/proxyquire) and [Sinon](https://github.com/sinonjs/sinon).
+- [x] Integration Tests: [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest) and [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server).
+- [x] Backend Tests: [Jest](https://github.com/facebook/jest) and [Axios](https://github.com/axios/axios).
+- [x] Frontend Tests: [Jest](https://github.com/facebook/jest) and [Puppeteer](https://github.com/puppeteer/puppeteer).
+- [ ] Performance Tests: [Artillery](https://github.com/artilleryio/artillery).
+- [ ] Security Tests.  
 
 ## Links
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-* [Artillery](https://github.com/artilleryio/artillery)
-* [Axios](https://github.com/axios/axios)
 * [Docker](https://docs.docker.com/get-docker/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
-* [Jest](https://github.com/facebook/jest)
 * [Martin Fowler](https://martinfowler.com/)
 * [MongoDB](https://www.mongodb.com/)
-* [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server)
-* [Mongoose](https://github.com/Automattic/mongoose)
 * [NodeJS](https://nodejs.org/en/download/)
-* [Proxyquire](https://github.com/thlorenz/proxyquire)
-* [Puppeteer](https://github.com/puppeteer/puppeteer)
 * [Shields.io](https://github.com/Ileriayo/markdown-badges)
-* [Sinon](https://github.com/sinonjs/sinon)
-* [Supertest](https://github.com/visionmedia/supertest)
 * [Twelve-Factor App](https://12factor.net/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
