@@ -10,6 +10,7 @@
 </p>
 
 [![CI](https://github.com/leoduprates/javascript-testing/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/leoduprates/javascript-testing/actions/workflows/ci.yml)
+<img alt="coverage" src="https://img.shields.io/badge/dynamic/json?color=success&label=coverage&query=%24.total.branches.pct&url=https%3A%2F%2Fgist.githubusercontent.com%2Fleoduprates%2F80e2092dfa47c651009be8e7cbb3ef84%2Fraw%2F3c046c5e8792d88887918a6ac438c623f3a90b9c%2Fjavascript-testing-coverage.json"/>
 
 # Javascript Testing
 
