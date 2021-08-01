@@ -20,6 +20,8 @@ jobs:
         cache: 'npm'
     - name: Install Dependencies
       run: npm ci
+    - name: Run Coverage
+      run: npm run coverage
     - name: Run Unit Tests
       run: npm run test:unit
     - name: Run Integration Tests
@@ -30,5 +32,3 @@ jobs:
       run: npm run test:frontend
     - name: Run Performance Tests
       run: npm run test:performance
-    - name: Run Coverage
-      run: npm run coverage
