@@ -3,9 +3,6 @@ services:
   mongodb:
     image: mongo:latest
     restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: dbuser
-      MONGO_INITDB_ROOT_PASSWORD: dbpassword
     ports:
       - 27017:27017
 
@@ -15,6 +12,4 @@ services:
     ports:
       - 3200:8081
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: dbuser
-      ME_CONFIG_MONGODB_ADMINPASSWORD: dbpassword
       ME_CONFIG_MONGODB_SERVER: mongodb

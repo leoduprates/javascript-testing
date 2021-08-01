@@ -71,8 +71,6 @@ It was used on [GitHub Actions](https://github.com/features/actions) to build th
     ```
     PORT=3000
     MONGO_URI=mongodb://localhost:27017
-    MONGO_USER=dbuser
-    MONGO_PASSWORD=dbpassword
     MONGO_NAME=cards
     ```
 
