@@ -55,7 +55,7 @@ It was used on [GitHub Actions](https://github.com/features/actions) to build th
 - [x] Integration Testing: [Jest](https://github.com/facebook/jest), [Supertest](https://github.com/visionmedia/supertest) and [MongoDB In-Memory Server](https://github.com/nodkz/mongodb-memory-server).
 - [x] API Testing: [Jest](https://github.com/facebook/jest) and [Axios](https://github.com/axios/axios).
 - [x] GUI Testing: [Jest](https://github.com/facebook/jest), [Puppeteer](https://github.com/puppeteer/puppeteer) and [Faker.js](https://github.com/Marak/Faker.js).
-- [ ] Performance Testing: [Artillery](https://github.com/artilleryio/artillery).
+- [x] Performance Testing: [Artillery](https://github.com/artilleryio/artillery).
 - [ ] Security Testing.
 
 ## Getting Started
