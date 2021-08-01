@@ -32,3 +32,7 @@ jobs:
       run: npm run test:frontend
     - name: Run Performance Tests
       run: npm run test:performance
+    - name: Publish Coverage
+      run: |
+        content=`node -pe 'JSON.stringify(process.argv[1])' "$(cat ./coverage/coverage-summary.json)"`
+        curl -X PATCH -H "Accept: application/vnd.github.v3+json" -u leoduprates:${{ secrets.GIST_SECRET }} https://api.github.com/gists/80e2092dfa47c651009be8e7cbb3ef84 -d '{"files":{"javascript-testing-coverage.json":{"content": '"$content"'}}}'
