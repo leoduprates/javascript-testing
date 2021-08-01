@@ -28,13 +28,19 @@ app.use('/js', express.static(path.resolve(__dirname, '../views/assets/js')));
 app.use(
   '/css',
   express.static(
-    path.resolve(__dirname, '../../node_modules/@fortawesome/fontawesome-free/css'),
+    path.resolve(
+      __dirname,
+      '../../node_modules/@fortawesome/fontawesome-free/css',
+    ),
   ),
 );
 app.use(
   '/js',
   express.static(
-    path.resolve(__dirname, '../../node_modules/@fortawesome/fontawesome-free/js'),
+    path.resolve(
+      __dirname,
+      '../../node_modules/@fortawesome/fontawesome-free/js',
+    ),
   ),
 );
 app.use(
