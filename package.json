@@ -14,7 +14,7 @@
     "test:frontend": "jest --testPathPattern=tests/e2e/frontend --runInBand",
     "test:backend": "jest --testPathPattern=tests/e2e/backend --runInBand",
     "test:performance": "npm run start:mongomock & npm run start:test & artillery run ./tests/performance/cards.yml",
-    "coverage": "jest --collect-coverage",
+    "coverage": "jest --coverage --coverageReporters='json-summary'",
     "lint": "eslint ."
   },
   "author": "leoduprates",
