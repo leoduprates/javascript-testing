@@ -1,9 +1,9 @@
-const cardsModel = require('../models/cardsModel');
+const CardsModel = require('../models/cardsModel');
 
 exports.render = async (req, res) => {
   try {
-    const cards = await cardsModel.find();
-    res.status(200).render('index', { cards: cards });
+    const cards = await CardsModel.find();
+    res.status(200).render('index', { cards });
   } catch (error) {
     res
       .status(500)
@@ -18,7 +18,7 @@ exports.create = async (req, res) => {
       return;
     }
 
-    const card = new cardsModel({
+    const card = new CardsModel({
       title: req.body.title,
       description: req.body.description,
     });
@@ -34,41 +34,47 @@ exports.create = async (req, res) => {
 };
 
 exports.find = async (req, res) => {
-  if (req.params.id) {
-    const id = req.params.id;
+  try {
+    const { id } = req.params;
 
-    const card = await cardsModel.findById(id);
+    if (id) {
+      const card = await CardsModel.findById(id);
 
-    if (!card) {
-      res.status(404).send({ message: `not found the card with id ${id}` });
+      if (card == null) {
+        res.status(404).send({ message: `not found the card with id ${id}` });
+      } else {
+        res.status(200).send(card);
+      }
     } else {
-      res.status(200).send(card);
-    }
-  } else {
-    const cards = await cardsModel.find();
+      const cards = await CardsModel.find();
 
-    if (!cards) {
-      res.status(500).send({ message: `error retrieving cards information` });
-    } else {
-      res.status(200).send(cards);
+      if (cards.length === 0) {
+        res.status(404).send({ message: 'error retrieving cards information' });
+      } else {
+        res.status(200).send(cards);
+      }
     }
+  } catch (error) {
+    res
+      .status(500)
+      .send({ message: error.message || 'error find card information' });
   }
 };
 
 exports.update = async (req, res) => {
   if (!req.body) {
-    return res.status(400).send({ message: 'data to update cannot be empty' });
+    res.status(400).send({ message: 'data to update cannot be empty' });
   }
 
   try {
-    const id = req.params.id;
+    const { id } = req.params;
 
-    const card = await cardsModel.findByIdAndUpdate(id, req.body, {
+    const card = await CardsModel.findByIdAndUpdate(id, req.body, {
       new: true,
       useFindAndModify: false,
     });
 
-    if (!card) {
+    if (card == null) {
       res.status(404).send({ message: `cannot update card with ${id}` });
     } else {
       res.status(200).send(card);
@@ -82,20 +88,18 @@ exports.update = async (req, res) => {
 
 exports.delete = async (req, res) => {
   let id;
-  
+
   try {
     id = req.params.id;
 
-    const card = await cardsModel.findByIdAndDelete(id);
+    const card = await CardsModel.findByIdAndDelete(id);
 
-    if (!card) {
+    if (card == null) {
       res.status(404).send({ message: `cannot delete card with id ${id}` });
     } else {
       res.status(200).send({ message: 'card was deleted successfully' });
     }
   } catch (error) {
-    res
-      .status(500)
-      .send({ message: error.message || `Cannot delete card with  id ${id}` });
+    res.status(500).send({ message: error.message || 'error delete card' });
   }
 };

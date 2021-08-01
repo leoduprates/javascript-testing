@@ -1,0 +1,15 @@
+{
+  "Add": "#card-button",
+  "Form": {
+    "Title": "#title-input",
+    "Description": "#description-textarea",
+    "Save": "#save-button"  
+  },
+  "Card": {
+    "Self": ".card",
+    "Title": ".title-card",
+    "Description": ".description-card",
+    "Delete": "#delete-card",
+    "Update": "#update-card"
+  }
+}

@@ -1,8 +1,8 @@
-const cardsModel = require('../../src/models/cardsModel');
+const CardsModel = require('../../src/models/cardsModel');
 
 describe('cards model', () => {
   it('should create card model', () => {
-    const card = new cardsModel({
+    const card = new CardsModel({
       title: 'Title value',
       description: 'Description value',
     });
@@ -12,7 +12,7 @@ describe('cards model', () => {
   });
 
   it('should create the card model only with valid values', () => {
-    const card = new cardsModel({
+    const card = new CardsModel({
       title: 'Valid value',
       something: 'Invalid value',
     });
