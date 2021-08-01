@@ -7,13 +7,13 @@
     "start": "node index.js",
     "start:dev": "nodemon --delay 500ms index.js",
     "start:test": "NODE_ENV=test npm start",
-    "start:mock": "node tests/performance/helpers/mongoMock.js",
+    "start:mongomock": "node tests/performance/helpers/mongoMock.js",
     "test": "NODE_ENV=test jest --verbose --runInBand",
     "test:unit": "jest --testPathPattern=tests/unit",
     "test:integration": "jest --testPathPattern=tests/integration",
     "test:frontend": "jest --testPathPattern=tests/e2e/frontend --runInBand",
     "test:backend": "jest --testPathPattern=tests/e2e/backend --runInBand",
-    "test:performance": "artillery run ./tests/performance/cards.yml",
+    "test:performance": "npm run start:mongomock & npm run start:test & artillery run ./tests/performance/cards.yml",
     "coverage": "jest --collect-coverage",
     "lint": "eslint ."
   },
@@ -24,8 +24,7 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "mongoose": "^5.13.3",
-    "morgan": "^1.10.0"
+    "mongoose": "^5.13.3"
   },
   "devDependencies": {
     "artillery": "^1.7.6",
