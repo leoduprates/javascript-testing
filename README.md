@@ -20,7 +20,6 @@ White-box, black-box and non-functional test demonstration in an Express.js-base
 ```shell
 javascript-testing/
 ├── src
-│   ├── assets
 │   ├── controllers
 │   ├── database
 │   ├── models

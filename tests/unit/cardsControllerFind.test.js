@@ -1,20 +1,22 @@
-const cardsController = require('../../src/controllers/cardsController');
-const cardsModel = require('../../src/models/cardsModel');
 const mongoose = require('mongoose');
 const sinon = require('sinon');
+const cardsController = require('../../src/controllers/cardsController');
+const CardsModel = require('../../src/models/cardsModel');
 
 describe('cards controller - find', () => {
-  let req, res, card;
+  let req;
+  let res;
+  let card;
 
   beforeEach(async () => {
-    card = new cardsModel({
+    card = new CardsModel({
       title: 'Title value',
       description: 'Description value',
     });
 
     req = {
-      params: {}
-    }
+      params: {},
+    };
 
     res = {
       status: sinon.stub().returnsThis(),
@@ -69,7 +71,9 @@ describe('cards controller - find', () => {
     await cardsController.find(req, res);
 
     sinon.assert.calledWith(res.status, 404);
-    sinon.assert.calledWithMatch(res.send, { message: 'not found the card with id 61014b1134851b9203900c6e' });
+    sinon.assert.calledWithMatch(res.send, {
+      message: 'not found the card with id 61014b1134851b9203900c6e',
+    });
   });
 
   it('should return status error 500 if not found documents', async () => {
@@ -78,6 +82,8 @@ describe('cards controller - find', () => {
     await cardsController.find(req, res);
 
     sinon.assert.calledWith(res.status, 500);
-    sinon.assert.calledWithMatch(res.send, { message: 'Cannot read property \'length\' of undefined' });
+    sinon.assert.calledWithMatch(res.send, {
+      message: "Cannot read property 'length' of undefined",
+    });
   });
 });

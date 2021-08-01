@@ -1,20 +1,19 @@
 <form action="/" method="POST">
     <div class="card-container">
         <% for(var i=0; i < cards.length; i++) { %>
-            <div class="card" data-id=card_<%=cards[i]._id%>>
+            <div class="card" data-id=card_<%- cards[i]._id %> >
                 <div class="title-container">
-                    <input type="text" class="title-card" id="title-card" data-id=title_<%=cards[i]._id %> value=<%=
-                        cards[i].title %> readonly="readonly">
-                        <a class="delete-card" id="delete-card" data-id=<%=cards[i]._id%>>
+                    <input type="text" class="title-card" id="title-card" data-id=title_<%- cards[i]._id %> value="<%- cards[i].title %>">
+                        <a class="delete-card" id="delete-card" data-id=<%- cards[i]._id %> >
                             <i class="fas fa-times"></i>
                         </a>
-                        <a class="update-card" id="update-card" data-id=<%=cards[i]._id%>>
+                        <a class="update-card" id="update-card" data-id=<%- cards[i]._id %> >
                             <i class="fas fa-save"></i>
                         </a>
                 </div>
                 <div class="description-container">
-                    <textarea class="description-card" id="description-card" data-id=description_<%=cards[i]._id
-                        %> readonly="readonly" rows="6"><%= cards[i].description %></textarea>
+                    <textarea class="description-card" id="description-card" data-id=description_<%- cards[i]._id %>
+                        rows="6"><%- cards[i].description %></textarea>
                 </div>
             </div>
             <% } %>

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const sinon = require('sinon');
-const mongodb = require('../../src/database/mongodb')
+const mongodb = require('../../src/database/mongodb');
 
 describe('mongodb connection', () => {
   let mongooseStub;

@@ -1,8 +1,9 @@
+const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 const server = require('../../../src/server/server');
-const mongoose = require('mongoose');
 
-let app, mongodb;
+let app;
+let mongodb;
 
 exports.start = async () => {
   mongodb = await MongoMemoryServer.create();
@@ -15,10 +16,10 @@ exports.start = async () => {
   });
 
   app = server.listen(3000);
-}
+};
 
 exports.stop = async () => {
   await app.close();
   await mongoose.disconnect();
-  await mongodb.stop()
-}
+  await mongodb.stop();
+};

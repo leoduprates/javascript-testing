@@ -9,7 +9,7 @@ exports.connection = async () => {
       useCreateIndex: true,
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useFindAndModify: false
+      useFindAndModify: false,
     });
   } catch (error) {
     throw new Error(error);

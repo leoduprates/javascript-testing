@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.delete-card').forEach((item) => {
     item.addEventListener('click', () => {
       const id = item.getAttribute('data-id');
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       xhr.open('DELETE', `/api/cards/${id}`, true);
       xhr.send();
 
-      location.reload();
+      window.location.reload();
     });
   });
 
@@ -16,13 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const id = item.getAttribute('data-id');
       const title = document.querySelector(`[data-id='title_${id}']`);
       const description = document.querySelector(
-        `[data-id='description_${id}']`
+        `[data-id='description_${id}']`,
       );
-
-      console.log({
-        title: title.value,
-        description: description.value,
-      });
 
       const xhr = new XMLHttpRequest();
       xhr.open('PUT', `/api/cards/${id}`, true);
@@ -31,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
         JSON.stringify({
           title: title.value,
           description: description.value,
-        })
+        }),
       );
 
-      location.reload();
+      window.location.reload();
     });
   });
 
@@ -45,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.querySelectorAll('#description-card').forEach((item) => {
-    item.addEventListener('click', function () {
+    item.addEventListener('click', () => {
       item.removeAttribute('readonly');
     });
   });

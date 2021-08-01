@@ -1,5 +1,6 @@
-const cardsController = require('../controllers/cardsController');
 const express = require('express');
+const cardsController = require('../controllers/cardsController');
+
 const route = express.Router();
 
 route.delete('/api/cards/:id', cardsController.delete);
