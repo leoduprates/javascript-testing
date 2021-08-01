@@ -32,9 +32,7 @@ describe('POST /api/cards', () => {
 
     await axios.post(`${URL}/api/cards`, data).catch((error) => {
       expect(error.response.status).toBe(400);
-      expect(error.response.data.message).toEqual(
-        'body content cannot be empity',
-      );
+      expect(error.response.data.message).toEqual('body content cannot be empity');
     });
   });
 });

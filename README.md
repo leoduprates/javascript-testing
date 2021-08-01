@@ -13,7 +13,12 @@
 
 # Javascript Testing
 
-White-box, black-box and non-functional test demonstration in an Express.js-based application with MVC pattern (Model-View-Controller).
+Project developed using the Dev-Test-Ops approach, consisting of application development, test and delivery together.
+
+This strategy gives the opportunity to design the application to remain testable across all layers and embeddable in CI\CD.
+
+Application, test and infrastructure as code are in the same domain, and the developer and QA have the same role and responsibilities as an engineer with full access to white box, black box and non-functional testing.
+
 
 ## Project Architecture
 
@@ -122,7 +127,7 @@ The tests were structured with 3 well-separated sections, Arrange, Act and Asser
 * Act: Execute the test.
 * Assert: Ensure the result was as expected.
 
-### BDD
+### Behavior-Driven Development (BDD)
 
 Using declarative ways of writing code allows learning to be fast and cohesive. This helps to organize the tests and more easily understand possible issues. Because of this, [Jest](https://jestjs.io/) was chosen to provide among other functionality the structures for the BDD.
 
@@ -136,13 +141,18 @@ Using declarative ways of writing code allows learning to be fast and cohesive. 
 
 ### White-Box Testing
 
-* Unit Test: It's a way to test the smallest piece of code that can be logically isolated on a system.
-* Integration Test: It is a form of testing in which software modules are logically integrated and tested as a group.
+* Unit Testing: It's a way to test the smallest piece of code that can be logically isolated on a system.
+* Integration Testing: It is a form of testing in which software modules are logically integrated and tested as a group.
 
 ### Black-Box Testing
 
-* Backend Test: Tests the server-side and database of an application.
-* Frontend Test: Tests the client side of the application, verifying GUI functionality and usability.
+* Backend Testing: Tests the server-side and database of an application.
+* Frontend Testing: Tests the client side of the application, verifying GUI functionality and usability.
+
+### Non-functional Testing
+
+* Performance Testing: Test application performance under normal and high-demand conditions by evaluating stability, scalability, reliability, speed, and usage of infrastructure resources.
+* Security Testing: Test the application by looking for weaknesses and security vulnerabilities.
 
 ## Links
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)

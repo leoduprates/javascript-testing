@@ -38,10 +38,7 @@ describe('create card', () => {
     await page.click(pageobject.Form.Save);
     await page.waitForSelector(pageobject.Card.Self);
 
-    const cardTitle = await page.$eval(
-      pageobject.Card.Title,
-      (element) => element.value,
-    );
+    const cardTitle = await page.$eval(pageobject.Card.Title, (element) => element.value);
     const cardDescription = await page.$eval(
       pageobject.Card.Description,
       (element) => element.value,

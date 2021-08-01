@@ -5,9 +5,7 @@ exports.render = async (req, res) => {
     const cards = await CardsModel.find();
     res.status(200).render('index', { cards });
   } catch (error) {
-    res
-      .status(500)
-      .send({ message: error.message || 'error retrieving cards information' });
+    res.status(500).send({ message: error.message || 'error retrieving cards information' });
   }
 };
 
@@ -55,9 +53,7 @@ exports.find = async (req, res) => {
       }
     }
   } catch (error) {
-    res
-      .status(500)
-      .send({ message: error.message || 'error find card information' });
+    res.status(500).send({ message: error.message || 'error find card information' });
   }
 };
 
@@ -80,9 +76,7 @@ exports.update = async (req, res) => {
       res.status(200).send(card);
     }
   } catch (error) {
-    res
-      .status(500)
-      .send({ message: error.message || 'error update card information' });
+    res.status(500).send({ message: error.message || 'error update card information' });
   }
 };
 

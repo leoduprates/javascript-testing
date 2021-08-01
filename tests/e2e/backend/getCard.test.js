@@ -45,18 +45,14 @@ describe('GET /api/cards', () => {
   it('should get 404 status error when no card with id sent', async () => {
     await axios.get(`${URL}/api/cards/61014b1134851b9203900c6e`).catch((error) => {
       expect(error.response.status).toBe(404);
-      expect(error.response.data.message).toEqual(
-        'not found the card with id 61014b1134851b9203900c6e',
-      );
+      expect(error.response.data.message).toEqual('not found the card with id 61014b1134851b9203900c6e');
     });
   });
 
   it('should get 404 status error when no registered cards', async () => {
     await axios.get(`${URL}/api/cards`).catch((error) => {
       expect(error.response.status).toBe(400);
-      expect(error.response.data.message).toEqual(
-        'error retrieving cards information',
-      );
+      expect(error.response.data.message).toEqual('error retrieving cards information');
     });
   });
 });
