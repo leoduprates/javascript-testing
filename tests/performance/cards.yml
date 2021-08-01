@@ -1,0 +1,32 @@
+config:
+  target: 'http://localhost:3000/api'
+  phases:
+    - duration: 5
+      arrivalRate: 5
+      name: Warm up
+    - duration: 5
+      arrivalRate: 5
+      rampTo: 50
+      name: Ramp up load
+    - duration: 5
+      arrivalRate: 50
+      name: Sustained load
+  payload:
+    path: 'cards.csv'
+    fields:
+      - 'title'
+      - 'description'
+
+scenarios:
+  - name: 'Create Cards'
+    flow:
+      - post:
+          url: '/cards'
+          json:
+            title: '{{ title }}'
+            description: '{{ description }}'
+  - name: 'Get Cards'
+    flow:
+      - get:
+          url: '/cards'
+      - think: 0.2

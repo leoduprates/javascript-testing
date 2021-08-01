@@ -11,6 +11,7 @@
     "test:integration": "jest --testPathPattern=tests/integration",
     "test:frontend": "jest --testPathPattern=tests/e2e/frontend --runInBand",
     "test:backend": "jest --testPathPattern=tests/e2e/backend --runInBand",
+    "test:performance": "artillery run ./tests/performance/cards.yml",
     "coverage": "jest --collect-coverage",
     "lint": "eslint ."
   },
@@ -25,6 +26,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "artillery": "^1.7.6",
     "axios": "^0.21.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
