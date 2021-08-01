@@ -39,9 +39,7 @@ describe('PUT /api/cards', () => {
       })
       .catch((error) => {
         expect(error.response.status).toBe(404);
-        expect(error.response.data.message).toEqual(
-          'cannot update card with 61014b1134851b9203900c6e',
-        );
+        expect(error.response.data.message).toEqual('cannot update card with 61014b1134851b9203900c6e');
       });
   });
 });

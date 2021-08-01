@@ -29,9 +29,7 @@ describe('DELETE /api/cards', () => {
   it('should get 404 status error when no card with id sent', async () => {
     await axios.delete(`${URL}/api/cards/61014b1134851b9203900c6e`).catch((error) => {
       expect(error.response.status).toBe(404);
-      expect(error.response.data.message).toEqual(
-        'cannot delete card with id 61014b1134851b9203900c6e',
-      );
+      expect(error.response.data.message).toEqual('cannot delete card with id 61014b1134851b9203900c6e');
     });
   });
 });

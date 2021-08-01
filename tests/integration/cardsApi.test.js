@@ -52,9 +52,7 @@ describe('/api/cards', () => {
         .send({})
         .then((response) => {
           expect(response.statusCode).toBe(400);
-          expect(response.body.message).toEqual(
-            'body content cannot be empity',
-          );
+          expect(response.body.message).toEqual('body content cannot be empity');
           done();
         });
     });
@@ -75,9 +73,7 @@ describe('/api/cards', () => {
           expect(response.body.length).toBe(1);
           expect(response.body[0]._id).not.toBeNull();
           expect(response.body[0].title).toEqual('This is a title.');
-          expect(response.body[0].description).toEqual(
-            'This is a description.',
-          );
+          expect(response.body[0].description).toEqual('This is a description.');
           done();
         });
     });
@@ -117,9 +113,7 @@ describe('/api/cards', () => {
         .get('/api/cards')
         .then((response) => {
           expect(response.statusCode).toBe(404);
-          expect(response.body.message).toEqual(
-            'error retrieving cards information',
-          );
+          expect(response.body.message).toEqual('error retrieving cards information');
           done();
         });
     });
@@ -159,9 +153,7 @@ describe('/api/cards', () => {
         })
         .then((response) => {
           expect(response.statusCode).toBe(404);
-          expect(response.body.message).toEqual(
-            'cannot update card with 61014b1134851b9203900c6e',
-          );
+          expect(response.body.message).toEqual('cannot update card with 61014b1134851b9203900c6e');
           done();
         });
     });
@@ -179,9 +171,7 @@ describe('/api/cards', () => {
         .delete(`/api/cards/${card._id}`)
         .then((response) => {
           expect(response.statusCode).toBe(200);
-          expect(response.body.message).toEqual(
-            'card was deleted successfully',
-          );
+          expect(response.body.message).toEqual('card was deleted successfully');
           done();
         });
     });
