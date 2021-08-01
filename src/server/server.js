@@ -1,11 +1,7 @@
 const express = require('express');
-const morgan = require('morgan');
 const path = require('path');
 
 const app = express();
-
-// log requests
-app.use(morgan('tiny'));
 
 // parse request to body-parser
 app.use(express.json());
