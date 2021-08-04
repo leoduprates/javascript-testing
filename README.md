@@ -14,11 +14,11 @@
 
 # Javascript Testing
 
-Project developed using the Dev-Test-Ops approach, consisting of application development, test and delivery together.
+Project developed using the Dev-Test-Ops approach, consisting of application development, test and delivery.
 
-This strategy gives the opportunity to design the application to remain testable across all layers and embeddable in CI\CD.
+This strategy gives the opportunity to design the application to remain testable across all layers including the CI\CD.
 
-Application, test and infrastructure as code are in the same domain, and the developer and QA have the same role and responsibilities as an engineer with full access to white box, black box and non-functional testing.
+Application, test and infrastructure as code are in the same domain. Developer and QA have the same role and responsibilities as an engineer with full access to white box, black box and non-functional testing.
 
 
 ## Project Architecture
