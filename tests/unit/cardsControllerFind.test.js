@@ -83,7 +83,7 @@ describe('cards controller - find', () => {
 
     sinon.assert.calledWith(res.status, 500);
     sinon.assert.calledWithMatch(res.send, {
-      message: "Cannot read property 'length' of undefined",
+      message: "Cannot read properties of undefined (reading 'length')",
     });
   });
 });

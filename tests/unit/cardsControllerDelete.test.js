@@ -64,7 +64,7 @@ describe('cards controller - delete', () => {
 
     sinon.assert.calledWith(res.status, 500);
     sinon.assert.calledWithMatch(res.send, {
-      message: "Cannot read property 'id' of undefined",
+      message: "Cannot read properties of undefined (reading 'id')",
     });
   });
 
