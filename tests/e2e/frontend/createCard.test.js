@@ -17,7 +17,12 @@ describe('create card', () => {
   });
 
   beforeEach(async () => {
-    browser = await puppeteer.launch();
+    browser = await puppeteer.launch(
+      {
+        executablePath: '/usr/bin/google-chrome',
+        args: ['--no-sandbox' ]
+      }
+    );
     page = await browser.newPage();
     await page.goto(config.URL);
   });

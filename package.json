@@ -13,7 +13,7 @@
     "test:frontend": "jest --testPathPattern=tests/e2e/frontend --runInBand --json --outputFile='./tests/reports/frontend_report.json'",
     "test:backend": "jest --testPathPattern=tests/e2e/backend --runInBand --json --outputFile='./tests/reports/backend_report.json'",
     "test:performance": "npm run start:mongomock & npm run start:test & artillery run ./tests/performance/cards.yml",
-    "coverage": "jest --coverage --coverageReporters='json-summary'",
+    "coverage": "jest --runInBand --coverage --coverageReporters='json-summary'",
     "lint": "eslint ."
   },
   "author": "leoduprates",
